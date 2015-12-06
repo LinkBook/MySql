@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="fa" xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>لینک بوک</title>
+
+    <link rel="stylesheet" media="screen" type="text/css" href="../static/css/style.css"/>
+
+    <style type="text/css">
+        body, td, th {
+            font-family: "b nazanin", serif;
+        }
+
+        a {
+            font-family: "b nazanin", serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "b nazanin", serif;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Start Wrapper -->
+<div id="wrapper">
+
+    <!-- Start Header -->
+    <div id="header">
+
+        <div class="right">
+            <div id="logo">
+
+            </div>
+
+            <div id="tagline">
+
+            </div>
+        </div>
+
+        <div class="left">
+
+            <div id="sn-icons">
+
+                <a href="Logout"><img src="../static/images/linkbook-img/LogOut.png" width="52" height="52"
+                                      alt="Logout" title="وارد شدن"/></a>
+
+            </div>
+
+
+            <div id="searchfrm">
+                <form action="#">
+                    <input type="submit" value=""/>
+                    <label>
+                        <input type="text" name="search" value="جستجو..."
+                               onfocus="if(this.value == 'جستجو...') {this.value = '';}"
+                               onblur="if(this.value == '') {this.value = 'جستجو...';}"/>
+                    </label>
+                </form>
+
+            </div>
+        </div>
+
+        <br style="clear: both;"/>
+
+
+        <ul id="menu">
+
+            <li><a href="index"><strong>خانه</strong></a></li>
+            <li><a href="webshow"><strong>نمایش وب سایت </strong></a></li>
+            <li><a href="about">درباره</a></li>
+            <li><a href="Contact">ارتباط با ما</a></li>
+            <li><a href="help"><strong>راهنما</strong></a></li>
+            <li><a href="Webpages">صفحه ی وب سایت</a></li>
+            <li><a href="Dashboard">داشبورد</a></li>
+        </ul>
+
+        <br style="clear: both;"/>
+    </div>
+    <!-- End Header -->
+
+
+    <!-- Start Container -->
+    <div id="container">
+        <div id="webpage">
+            <br>
+            <span id="toc"> <h2> پنل میدیریتی لینک بوک (ثبت وب سایت) </h2> </span> <br>
+
+
+            <ul id="Dashboard-menu">
+                <li><a href="#rwp">ثبت وب سایت جدید</a></li>
+                <li><a href="#about">ثبت درباره سایت</a></li>
+                <li><a href="#honor">ثبت افتخارات وب سایت</a></li>
+                <li><a href="#subs">خبرنامه</a></li>
+                <li><a href="#comment">مدیریت نظرات</a></li>
+            </ul>
+
+            <br><br>
+            <hr>
+            <br>
+
+            <h2 id="rwp" style="text-align: center;">ثبت وب سایت </h2> <br>
+
+
+            <form id="wpr" action="Webpages" method="post" enctype="multipart/form-data" target="_blank">
+
+
+                <p>
+                    <label>عنوان وب سایت</label> <br>
+                    <label>
+                        <input type="text" name="web-title" required>
+                    </label> <br>
+                </p>
+
+                <p>
+                    <label>لینک وب سایت</label> <br>
+                    <label>
+                        <input type="url" name="web-url" required>
+                    </label> <br><br>
+                </p>
+
+
+                <p>
+                    <label> تعیین دسته ی اصلی &nbsp;: </label>
+                    <label>
+                        <select name="category">
+                            <option value="cat-1"> کسب و کارهای انلاین</option>
+                            <option value="cat-2"> خدمات انلاین</option>
+                            <option value="cat-3">اطلاع رسانی و محتوا</option>
+                            <option value="cat-4"> شخصی و شرکتی</option>
+                        </select>
+                    </label><br> <br>
+                </p>
+
+
+                <label>تعیین زیر دسته های مرتبط </label> <br> <br>
+
+
+                <label> کسب و کارهای انلاین </label> <br>
+
+                <label>اپ استور و مارکت ها </label>
+                <label>
+                    <input type="radio" name="" value="a"/>
+                </label>
+                <label>تبلیغات آنلاین </label>
+                <label>
+                    <input type="radio" name="" value="b"/>
+                </label>
+                <label>فروشگاه های آنلاین </label>
+                <label>
+                    <input type="radio" name="" value="c"/>
+                </label>
+                <label> خرید گروهی </label>
+                <label>
+                    <input type="radio" name="" value="d"/>
+                </label>
+                <label> فروشگاه های اختصاصی </label>
+                <label>
+                    <input type="radio" name="" value="e"/>
+                </label>
+                <br>
+                <br>
+
+                <label> خدمات انلاین</label><br>
+
+                <label>آموزش آنلاین </label>
+                <label>
+                    <input type="radio" name="" value="f"/>
+                </label>
+                <label>بازی های آنلاین </label>
+                <label>
+                    <input type="radio" name="" value="g"/>
+                </label>
+                <label> پرداخت آنلاین </label>
+                <label>
+                    <input type="radio" name="" value="h"/>
+                </label>
+                <label>سرویس نرم افزاری آنلاین</label>
+                <label>
+                    <input type="radio" name="" value="i"/>
+                </label>
+                <label>تغذیه و رستوران ها </label>
+                <label>
+                    <input type="radio" name="" value="j"/>
+                </label>
+                <br>
+                <br>
+
+                <label>اطلاع رسانی و محتوا </label> <br>
+
+                <label>خانواده و کودک </label>
+                <label>
+                    <input type="radio" name="" value="k"/>
+                </label>
+                <label>دین و معارف </label>
+                <label>
+                    <input type="radio" name="" value="l"/>
+                </label>
+                <label>سایت های خبری و خبرگزاری ها </label>
+                <label>
+                    <input type="radio" name="" value="m"/>
+                </label>
+                <label>سایت های شهری و محله ای </label>
+                <label>
+                    <input type="radio" name="" value="n"/>
+                </label>
+                <label>علم و دانش </label>
+                <label>
+                    <input type="radio" name="" value="o"/>
+                </label>
+                <br>
+                <br>
+
+                <label>شخصی و شرکتی </label> <br>
+
+                <label> بانک و بیمه </label>
+                <label>
+                    <input type="radio" name="" value="p"/>
+                </label>
+                <label> سازمان های دولتی و عمومی </label>
+                <label>
+                    <input type="radio" name="" value="q"/>
+                </label>
+                <label> شرکت های بورس و فرابورس </label>
+                <label>
+                    <input type="radio" name="" value="r"/>
+                </label>
+                <label>صنایع دارویی و بهداشتی </label>
+                <label>
+                    <input type="radio" name="" value="s"/>
+                </label>
+                <label>وب سایت های شخصی </label>
+                <label>
+                    <input type="radio" name="" value="t"/>
+                </label>
+
+
+                <br> <br>
+                <input type="submit" value="ثبت اطلاعات">
+                <br>
+                <br>
+
+
+            </form>
+
+            <p>
+
+            <h3>لوگوی وب سایت</h3></p>
+            <in>
+                <form enctype="multipart/form-data" action="/upload1" method="post">
+                    <a href="#" onclick="document.getElementById('fileID').click(); return false;"/>
+                    <input type="button" value="بارگذاری">
+                    </a>
+                    <input type="file" name="file1" id="fileID" style="visibility: hidden;"/>
+                    <br/>
+                    <input type="submit" value="فرستادن"/>
+                </form>
+            </in>
+        </div>
+
+        <hr>
+
+        <h2 id="about" style="text-align: center;"> معرفی </h2> <br>
+
+        <form id="wpr1" action="/mm" method="post" target="_blank">
+
+
+            <label>چشم انداز </label> <br>
+            <label>
+                <textarea name="vision" required> </textarea>
+            </label> <br>
+
+            <label>ماموریت </label> <br>
+            <label>
+                <textarea name="mision" required> </textarea>
+            </label> <br> <br>
+
+            <input type="submit" value="فرستادن اطلاعات"/>
+
+
+        </form>
+
+        <br> <br>
+
+        <hr>
+
+        <a href="#toc"> برو بالا </a>
+
+        <h2 id="honor" style="text-align: center;"> افتخارات </h2>
+        <br>
+
+
+        <form id="wpr2" action="/aa" method="post" enctype="multipart/form-data" target="_blank">
+
+            <form action=" Webpages" method="post" target="_blank">
+
+
+                <br>
+
+                <label> عنوان جشنواره </label> <br>
+                <label>
+                    <input type="text" name="fest-title" required>
+                </label> <br>
+                <label> درباره جشنواره </label> <br>
+                <label>
+                    <textarea name="fest-text"></textarea>
+                </label> <br><br>
+
+
+                <label> لینک جشنواره : </label> <br>
+                <label>
+                    <input type="url" name="fest-url" required>
+                </label> <br> <br>
+                <input type="submit" value="ثبت اطلاعات">
+
+
+            </form>
+            <p>
+
+            <h3> لوگوی جشنواره :</h3></p>
+            <form enctype="multipart/form-data" action="/upload2" method="post">
+                <a href="#" onclick="document.getElementById('fileID2').click(); return false;"/>
+                <input type="button" value="بارگذاری"></a>
+                <input type="file" name="file2" id="fileID2" style="visibility: hidden;"/>
+
+
+                <br/>
+                <input type="submit" value="فرستادن"/>
+            </form>
+
+
+            <br><br>
+
+            <hr>
+            <a href="#toc"> برو بالا </a>
+
+            <h2 id="subs" style="text-align: center;">خبرنامه </h2>
+            <br>
+            <br>
+            <br>
+
+            <form action="" method="post">
+
+
+            </form>
+
+            <a href="#toc"> برو بالا </a>
+
+            <h2 id="comment">مدیریت نظرات </h2>
+            <br>
+            <br>
+            <br>
+
+            <form action="" method="post">
+
+
+            </form>
+
+        </form>
+
+    </div>
+    <!-- End Container -->
+
+    <!-- Start Footer -->
+    <div id="footer">
+        <div class="left">
+            <div id="logof">
+                <a href="#"><img src="../static/images/linkbook-img/logof.png" width="80" height="110"/></a>
+            </div>
+            <br style="clear: both;"/>
+
+            <p class="copyright"> تمام حقوق این وب سایت متعلق است به
+                دانشجویان گروه کامپیوتر دانشگاه لرستان<br> پاییز 94
+            </p>
+        </div>
+    </div>
+    <!-- End Footer -->
+    <br style="clear: both;"/>
+</div>
+<!-- End Wrapper -->
+</body>
+</html>

@@ -1,0 +1,345 @@
+/**************************************/
+/* Load Fonts [bnazanin] */
+@font-face {
+    font-family: 'b nazanin';
+    src: url('../font/BNazanin.eot') format('eot'), /* IE6,8 */ url('../font/BNazanin.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../font/BNazanin.ttf') format('truetype');  /* Saf3?5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+/* End Load Fonts */
+
+/**************************************/
+/* My CSS Reset */
+* {
+    direction: rtl;
+    text-align: right;
+}
+
+*:focus {
+    outline: none;
+}
+
+* html body * {
+    overflow: visible;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, acronym, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, thead, tr, th, td {
+    background: transparent;
+
+    font-family: 'b nazanin', serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+div:target {
+    outline: 0 none;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section {
+    display: block;
+}
+
+[hidden] {
+    display: none;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #09f;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+p {
+    font-size: 14px;
+}
+
+/* End My CSS Reset */
+
+/**************************************/
+/* Start Body and Wrapper */
+body {
+    background: url('../images/linkbook-img/body-bg.png');
+}
+
+#wrapper {
+    width: 1024px;
+    border: 0 solid;
+    margin: 0 auto;
+}
+
+/* End Body and Wrapper */
+
+/**************************************/
+/* Start Header [logos, Social Network Icons , Search Form and Menu] */
+#header {
+    height: 248px;
+    background: url('../images/linkbook-img/header-bg.png') repeat-x;
+    box-shadow: 0 1px 1px #000;
+}
+
+#header .right {
+    float: right;
+}
+
+#header .left {
+    float: left;
+}
+
+#header .right #logo {
+    width: 253px;
+    height: 130px;
+    background: url('../images/linkbook-img/logo.png') no-repeat;
+    margin-right: 40px;
+    margin-top: 0;
+}
+
+#header .right #tagline {
+    width: 419px;
+    height: 58px;
+    background: url('../images/linkbook-img/title.png') no-repeat;
+    margin-right: 60px;
+}
+
+#header .right #logo h1,
+#header .right #tagline h2 {
+    text-indent: -9999px;
+}
+
+#header .left #sn-icons {
+    direction: ltr;
+    margin-top: 6px;
+    margin-right: 160px;
+}
+
+#header .left #sn-icons img {
+    opacity: .50;
+    box-shadow: 1px 1px 1px #333;
+}
+
+#header .left #sn-icons img:hover {
+    opacity: 1;
+}
+
+#header .left #searchfrm {
+    margin-top: 80px;
+}
+
+#header .left #searchfrm form input {
+    background: transparent;
+    border: none;
+}
+
+#header .left #searchfrm form input[type="text"] {
+    background: #072e63;
+    box-shadow: 1px 1px 1px #ffffff,
+    inset 1px 1px 1px #000;
+    border-radius: 3px;
+    font: 18px 'b nazanin';
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    width: 290px;
+    height: 30px;
+    line-height: 30px;
+    padding-right: 10px;
+    margin-left: 7px;
+}
+
+#header .left #searchfrm form input[type="submit"] {
+    background: url('../images/linkbook-img/search-btn.png') no-repeat;
+    height: 19px;
+    width: 19px;
+    position: absolute;
+    margin-right: 260px;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+#header #menu {
+    height: 50px;
+    background: url('../images/linkbook-img/menu-bg.png');
+    margin-top: 6px;
+    padding-right: 25px;
+}
+
+#header #menu li {
+    display: inline;
+    margin-left: 25px;
+    line-height: 50px;
+}
+
+#header #menu li a {
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #222;
+}
+
+#header #menu li a:hover {
+    color: #78afff;
+}
+
+#header #menu li a.home {
+    background: url('../images/linkbook-img/home-icon.png') no-repeat;
+    padding: 0 13px;
+}
+
+/* End Hheader */
+
+/**************************************/
+/* Start Container [Content and Sidebars] */
+
+#container {
+    width: 1024px;
+    border: 0 solid;
+    background: #fff;
+    margin-top: -5px;
+    margin-right: 0;
+
+}
+
+#container .post-item {
+
+    width: 200px;
+    padding: 10px;
+    float: left;
+    margin: 30px 10px 10px 10px;
+
+}
+
+#contact-form, #Register-form, #login-form {
+    padding: 20px;
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    width: 500px;
+
+    font-family: BRoya;
+
+}
+
+#contact-form lable {
+    line-height: 10px;
+    font-size: 15px;
+
+}
+
+#Dashboard-menu {
+    float: right;
+    border: 1px solid #aaa;
+    border-left: none;
+
+}
+
+#Dashboard-menu li {
+    float: right;
+    padding: 0 20px;
+    border-left: 1px solid #aaa;
+}
+
+#wpr {
+    padding: 0 30px;
+    margin: 10px auto;
+}
+
+#pagination {
+    clear: both;
+    width: 300px;
+    margin: 0 auto;
+    list-style: none;
+    background: #EDE7E7;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+#pagination li a {
+    float: left;
+    padding: 0 15px;
+    background: #fff;
+    border: 1px solid #aaa;
+    margin-right: 8px;
+
+}
+
+/* End Container */
+
+/**************************************/
+
+/* Start Footer */
+#footer {
+    background: #366995;
+    padding: 0;
+}
+
+#footer .left {
+    float: left;
+}
+
+#footer .left #logof {
+
+    width: 263px;
+    height: 26px;
+    margin-right: 800px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#footer .copyright {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: -20px;
+    font-size: 20px;
+}
+
+/* End Contai
