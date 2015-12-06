@@ -18,7 +18,7 @@ if __name__ == '__main__':
     tornado.options.parse_command_line()
     app = tornado.web.Application(
         handlers=[(r'/', MainHandler),
-                  (r'/index', MainsHandler),
+                  (r'/index', MainHandler),
                   (r'/Dashboard', DashBoardHandler),
                   (r'/about', AboutHandler),
                   (r'/Contact', ContactHandler),
