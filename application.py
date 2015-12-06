@@ -197,3 +197,8 @@ class ContactHandler(tornado.web.RequestHandler):
         cur.close()
         conn.commit()
         conn.close()
+
+
+class MainsHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render('Main.html')
