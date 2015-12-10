@@ -18,7 +18,7 @@ if __name__ == '__main__':
     tornado.options.parse_command_line()
     app = tornado.web.Application(
         handlers=[(r'/', MainHandler),
-                  (r'/index', MainsHandler),
+                  (r'/index', MainHandler),
                   (r'/Dashboard', DashBoardHandler),
                   (r'/about', AboutHandler),
                   (r'/Contact', ContactHandler),
@@ -28,8 +28,7 @@ if __name__ == '__main__':
                   (r'/Register', RegisterHandler),
                   (r'/Webpages', WebpagesHandler),
                   (r'/webshow', WebshowHandler),
-                  (r"/upload1", UploadHandler),
-                  (r"/upload2", Upload2Handler),
+                  (r"/upload1", UploadFile),
                   (r'/aa', Ahandler),
                   (r'/mm', Mhandler),
                   ], **TORNADO_SETTINGS
