@@ -7,7 +7,7 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 import pymysql
-
+import time
 
 # from tornado.options import define, options
 #
@@ -141,43 +141,43 @@ class MainHandler(tornado.web.RequestHandler):
         self.render('index.html')
 
 
-class UploadHandler(tornado.web.RequestHandler):
-    def post(self):
-
-        try:
-            file1 = self.request.files['file1'][0]
-        except:
-            file1 = None
-        original_fname = file1['filename']
-        m = original_fname.split('.')
-        n = '1.' + m[1]
-
-        output_file = open("static/uploads/1/" + n, 'wb')
-        output_file.write(file1['body'])
-
-        self.render('Webpages.html', n=n)
-
-
-class Upload2Handler(tornado.web.RequestHandler):
-    def post(self):
-
-        try:
-            file2 = self.request.files['file2'][0]
-        except:
-            file2 = None
-        original_fname = file2['filename']
-        m = original_fname.split('.')
-        n = '1.' + m[1]
-
-        output_file = open("static/uploads/2/" + n, 'wb')
-        output_file.write(file2['body'])
-
-        self.render('Webpages.html', n=n)
 
 
 class AboutHandler(tornado.web.RequestHandler):
     def get(self):
         self.render('about.html')
+
+
+
+
+class UploadFile(tornado.web.RequestHandler):
+  # handle a post request
+  def post(self):
+    # ... maybe add a check that checks whether the user is allowed to upload anything ...
+    # the file(s) that should get uploaded
+    files = []
+    # check whether the request contains files that should get uploaded
+    try:
+      files = self.request.files['files']
+    except:
+      pass
+    # for each file that should get uploaded
+    for xfile in files:
+      # get the default file name
+      file = xfile['filename']
+      # the filename should not contain any "evil" special characters
+      # basically "evil" characters are all characters that allows you to break out from the upload directory
+      index = file.rfind(".")
+      filename = file[:index].replace(".", "") + str(time.time()).replace(".", "") + file[index:]
+      filename = filename.replace("/", "")
+      # save the file in the upload folder
+      with open("static/uploads/%s/" % (filename), "wb") as out:
+        # Be aware, that the user may have uploaded something evil like an executable script ...
+        # so it is a good idea to check the file content (xfile['body']) before saving the file
+        out.write(xfile['body'])
+
+        self.render('Webpages.html')
+
 
 
 class ContactHandler(tornado.web.RequestHandler):
